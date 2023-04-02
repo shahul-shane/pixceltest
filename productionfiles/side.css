@@ -1,0 +1,197 @@
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  width: 40px;
+  height: 40px;
+  background-color: black; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 3px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.side-button a:nth-child(1){
+  position: fixed;
+  bottom: 140px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: white;
+  width: auto;
+  height: auto;
+  padding: 0.7%;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.side-button a:nth-child(1):hover{
+  color: var(--white);
+  background-color: #4FCE5D
+  ;
+}
+.side-button a:nth-child(2){
+
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: white;
+  width: auto;
+  height: auto;
+  padding: 0.9%;
+  font-size: 17px;
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.side-button a:nth-child(2):hover{
+  color: var(--white);
+  background-color: #1180FF
+  ;
+}
+
+.side-button a:nth-child(3){
+
+  position: fixed;
+  bottom: 200px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: white;
+  width: auto;
+  height: auto;
+  padding: 0.8%;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.side-button a:nth-child(3):hover{
+  color: var(--white);
+  background-color: #FF0000
+  ;
+}
+@media (max-width:600px){
+  #myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    width: 30px;
+    height: 30px;
+    background-color: black; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 3px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
+  
+  .side-button a:nth-child(1){
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #000;
+    color: white;
+    width: auto;
+    height: auto;
+    padding: 1.5%;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+  
+  .side-button a:nth-child(1):hover{
+    color: var(--white);
+    background-color: #4FCE5D
+    ;
+  }
+  .side-button a:nth-child(2){
+  
+    position: fixed;
+    bottom: 120px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #000;
+    color: white;
+    width: auto;
+    height: auto;
+    padding: 2.3%;
+    font-size: 17px;
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
+    border-radius: 8px;
+  }
+  
+  .side-button a:nth-child(2):hover{
+    color: var(--white);
+    background-color: #1180FF
+    ;
+  }
+
+.side-button a:nth-child(3){
+
+  position: fixed;
+  bottom: 170px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: white;
+  width: auto;
+  height: auto;
+  padding: 1.8%;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.side-button a:nth-child(3):hover{
+  color: var(--white);
+  background-color: #FF0000
+  ;
+}
+}

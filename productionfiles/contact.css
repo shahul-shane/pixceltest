@@ -1,0 +1,749 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Orbitron:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    
+    box-sizing: border-box;
+}
+
+
+:root {
+    --orange: #EDCFA9;
+    --white: #ffffff;
+    --black: #000
+}
+a{
+  color: #000;
+}
+body { background-color: var(--white); 
+overflow-x: hidden;
+}
+.logo{
+display: flex;
+}
+.logo p{
+font-family: 'Audiowide', cursive;
+font-weight: bolder;
+font-size: 20px;
+padding-left: 2%;
+}
+.logo span{
+  width: 2px;
+  height: 45px;
+  background-color: #c56900;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.ddiq p{
+  background-color: #ffffff;
+  font-family: sans-serif;
+  line-height: 12px;
+  font-size: 10px;
+}
+.nav {
+  height: 50px;
+  width: 100%;
+  position: relative;
+}
+
+.active{
+position: relative;
+display: inline-block;
+text-decoration: none;
+color: #000000;
+}
+.active::before,
+.active::after{
+content: '';
+position: absolute;
+left: 0%;
+width: 100%;
+height: 2px;
+background-color: rgb(0, 0, 0);
+transform: scaleX(0);
+transition: transform .25s;
+}
+
+.active::before{
+top: -1px;
+transform-origin: left;
+}
+
+.active::after{
+bottom: 10px;
+transform-origin: right;
+}
+
+.active:hover::before,
+.active:hover::after{
+transform: scaleX(1);
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: flex;
+  font-size: 18px;
+  justify-content: right;
+
+}
+
+.nav > .nav-links > a {  
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  text-transform: capitalize;
+  font-family: 'Audiowide', cursive;
+  text-align: center;
+  margin-right: 5%;
+  margin-top: -2.5%;
+  font-weight: bold;
+}
+
+
+.nav > #nav-check {
+  display: none;
+}
+ 
+.location-map{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5%;
+}
+.visit-text{
+  margin-top: 15%;
+}
+.visit-text span{
+  text-align: center;
+  font-family: 'Major Mono Display', monospace;
+  font-size: 40px;
+}
+
+.iframe iframe{
+  width: 600px;
+  height: 450px;
+}
+
+.iframe{
+  text-align: center;
+  font-family: 'Major Mono Display', monospace;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.contact
+{
+    position: relative;
+}
+
+
+.contact .content p
+{
+  text-align: center;
+  font-family: 'Major Mono Display', monospace;
+    color: #000000;
+    font-size: 26px;
+    font-weight: 300;
+    padding-top: 5%;
+}
+.container
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+
+}
+
+
+.container .contactForm
+{
+    position: relative;
+    width: 40%;
+    min-height: 500px;
+    padding: 60px;
+}
+.container .contactForm h2
+{
+  font-family: 'Major Mono Display', monospace;
+    font-size: 27px;
+    color: #333;
+    text-align: left;
+    font-weight: bolder;
+}
+.container .contactForm .inputBox
+{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+.container .contactForm .inputBox input,
+.container .contactForm .inputBox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 14px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+
+}
+.container .contactForm .inputBox span
+{
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    padding: 5px 0;
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #666;
+    transform: 0.5s;
+    font-family: 'Major Mono Display', monospace;
+
+}
+.container .contactForm .inputBox input:valid ~ span,
+.container .contactForm .inputBox input:focus ~ span,
+.container .contactForm .inputBox textarea:valid ~ span
+{
+    color: #e91e63;
+    font-size: 0.9em;
+    transform: translateY(-20px);
+}
+.submit{
+  background-color: #000; 
+  width: auto;
+  height: auto;
+  padding: 2%;
+  color: var(--white);
+  font-family: 'Major Mono Display', monospace;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  border-radius:5px;
+  margin-top: 4%;
+}
+
+.submit:hover{
+  background-color: var(--white);
+  color: var(--black);
+  font-weight: bolder;
+  border: 1px solid var(--black);
+}
+.social h2{
+  text-align: center;
+  font-family: 'Major Mono Display', monospace;
+  font-size: 21px;
+  font-weight: bolder;
+}
+.social-icon{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.social-icon a{
+  background-color: #ffffff;
+  width: auto;
+  height: auto;
+  padding: 1%;
+  font-size: 27px;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+
+}
+.social-icon a:nth-child(1):hover{
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+        
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  font-size: 27px;
+}
+.social-icon a:nth-child(2):hover {
+  color: #4267B2;
+}
+.social-icon a:nth-child(3):hover{
+  color: #1DA1F2;
+}
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  width: 40px;
+  height: 40px;
+  background-color: black; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 3px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.side-button a:nth-child(1){
+  position: fixed;
+  bottom: 140px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: white;
+  width: auto;
+  height: auto;
+  padding: 0.7%;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.side-button a:nth-child(1):hover{
+  color: var(--white);
+  background-color: #4FCE5D
+  ;
+}
+.side-button a:nth-child(2){
+
+  position: fixed;
+  bottom: 80px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: white;
+  width: auto;
+  height: auto;
+  padding: 0.9%;
+  font-size: 17px;
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.side-button a:nth-child(2):hover{
+  color: var(--white);
+  background-color: #1180FF
+  ;
+}
+.side-button a:nth-child(3){
+
+  position: fixed;
+  bottom: 200px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: white;
+  width: auto;
+  height: auto;
+  padding: 0.8%;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.side-button a:nth-child(3):hover{
+  color: var(--white);
+  background-color: #FF0000
+  ;
+}
+@media (max-width: 991px)
+{
+    .contact
+    {
+    padding: 50px;
+    }
+    .container
+    {
+    flex-direction: column;
+    }
+    .container .contactInfo,
+    .container .contactForm
+    {
+      width: 100%;
+    }
+    .container .contactForm
+    {
+        padding: 50px 30px;
+    }
+}
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+ 
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 8px;
+    border-top: 2px solid #000000;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #000000;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 40px;
+    left: 0px;
+    text-align: center;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+    color: #fff7f7;
+    margin-top: 10%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+  .active{
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+      color: #000000;
+  }
+  .active::before,
+  .active::after{
+      content: '';
+      position: absolute;
+      top: 15%;
+      width: 2px;
+      height: 80%;
+      background-color: rgb(255, 255, 255);
+      transform: scaleY(0);
+      transition: transform .50s;
+      margin-left: 25%;
+  }
+  
+  .active::before{
+      left: 49%;
+      transform-origin: bottom;
+  }
+  
+  .active::after{
+      right: 10%;
+      transform-origin: top;
+  }
+  
+  .active:hover::before,
+  .active:hover::after{
+      transform: scaleY(1);
+  }
+
+  .logo{
+    display: flex;
+  }
+  .logo p{
+      font-family: 'Audiowide', cursive;
+    font-weight: bolder;
+    font-size: 17px;
+  }
+    .logo span{
+      width: 2px;
+      height: 40px;
+      background-color: #c56900;
+    }
+  
+    .ddiq p{
+      background-color: #ffffff;
+      font-family: sans-serif;
+      line-height: 10px;
+      font-size: 10px;
+    }
+
+    .location-map{
+      flex-direction: column;
+      padding-top: 5%;
+    }
+    .visit-text{
+      margin-top: 5%;
+      text-align: center;
+    }
+    .visit-text span{
+      text-align: center;
+      font-family: 'Major Mono Display', monospace;
+      font-size: 28px;
+    }
+    
+    .iframe iframe{
+      margin-top: 5%;
+      width: 320px;
+      height: 500px;
+      text-align: center;
+      font-family: 'Major Mono Display', monospace;
+      font-size: 18px;
+      font-weight: bolder;
+      display: flex;
+      justify-content: center;
+    }
+    .iframe span{
+      margin: 0 auto;
+      width: 300px;
+      height: 500px;
+      text-align: center;
+      font-family: 'Major Mono Display', monospace;
+      font-size: 18px;
+      font-weight: bolder;
+      display: flex;
+      justify-content: center;
+      margin-left: 1.5%;
+    }
+.contact{
+    position: relative;
+    margin-top: -160%;
+}
+
+.content{
+ text-align: center;
+}
+.contact .content p
+{ 
+  font-family: 'Major Mono Display', monospace;
+    color: #000000;
+    font-size: 14px;
+    font-weight: 600;
+    padding-top: 5%;
+}
+
+.container
+{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    
+}
+
+
+.container .contactForm
+{
+    
+    position: relative;
+    width: 200%;
+    padding: 60px;
+    margin-left: 25%;
+}
+.container .contactForm h2
+{
+  font-family: 'Major Mono Display', monospace;
+    font-size: 18px;
+    color: #333;
+    text-align: left;
+    font-weight: bolder;
+}
+.container .contactForm .inputBox
+{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+.container .contactForm .inputBox input,
+.container .contactForm .inputBox textarea
+{
+    width: 80%;
+    padding: 5px 0;
+    font-size: 11px;
+    margin: 15px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+
+}
+.container .contactForm .inputBox span
+{
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    padding: 5px 0;
+    margin: 10px 0;
+    font-size: 11px;
+    font-weight: bolder;
+    color: #666;
+    transform: 0.5s;
+    font-family: 'Major Mono Display', monospace;
+
+}
+.container .contactForm .inputBox input:valid ~ span,
+.container .contactForm .inputBox input:focus ~ span,
+.container .contactForm .inputBox textarea:valid ~ span
+{
+    color: #e91e63;
+    font-size: 0.9em;
+    transform: translateY(-20px);
+}
+.submit{
+  background-color: #000; 
+  width: auto;
+  height: auto;
+  padding: 2.5%;
+  color: var(--white);
+  font-family: 'Major Mono Display', monospace;
+  cursor: pointer;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  border-radius:5px;
+  margin-top: 4%;
+}
+
+.submit:hover{
+  background-color: var(--white);
+  color: var(--black);
+  font-weight: bolder;
+  border: 1px solid var(--black);
+}
+.social h2{
+  text-align: center;
+  font-family: 'Major Mono Display', monospace;
+  font-size: 14px;
+  font-weight: bolder;
+  margin-top: -55%;
+}
+.social-icon{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.social-icon a{
+  background-color: #ffffff;
+  width: auto;
+  height: auto;
+  padding: 0.5%;
+  font-size: 27px;
+  color: rgb(0, 0, 0);
+  border-radius: 5px;
+
+}
+.social-icon a:nth-child(1):hover{
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+        
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  font-size: 27px;
+}
+.social-icon a:nth-child(2):hover {
+  color: #4267B2;
+}
+.social-icon a:nth-child(3):hover{
+  color: #FF0000;
+}
+.social-icon a:nth-child(4):hover{
+  color: #1DA1F2;
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 25%; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  width: 30px;
+  height: 30px;
+  background-color: black; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 5px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.side-button a:nth-child(1){
+  position: fixed;
+  bottom: 70px;
+  right: 25%;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: white;
+  width: auto;
+  height: auto;
+  padding: 1%;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.side-button a:nth-child(1):hover{
+  color: var(--white);
+  background-color: #4FCE5D
+  ;
+}
+.side-button a:nth-child(2){
+
+  position: fixed;
+  bottom: 120px;
+  right: 25%;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: white;
+  width: auto;
+  height: auto;
+  padding: 1.5%;
+  font-size: 17px;
+  display: flex;
+  justify-content: space-evenly;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.side-button a:nth-child(2):hover{
+  color: var(--white);
+  background-color: #1180FF
+  ;
+}
+}

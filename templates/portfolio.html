@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{% static 'port.css'%}">
+        <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+</head>
+<body> 
+   {% include "menu.html"%}
+</div>
+      <div class="title-section">
+        <div class="title">
+          <h1>our <br>portfolio</h1>
+        </div>
+        <div class="youtube">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed?listType=playlist&list=UUwdV2h-R5ZN6kyz6gUNdtMg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <br><span>watch our latest project</span>
+        </div>
+      </div>
+
+      <div class="projects">
+        <h2>projects</h2>
+        <div id="myBtnContainer">
+          <button class="btn actives" id="show-all" onclick="filterSelection('all')"> show all</button><br>
+          <button class="btn" onclick="filterSelection('hall')">hall</button>
+          <button class="btn" onclick="filterSelection('tv')">tv unit</button>
+          <button class="btn" onclick="filterSelection('kitchen')"> kitchen</button>
+          <button class="btn" onclick="filterSelection('pooja')">pooja unit</button>
+          <button class="btn" onclick="filterSelection('room')">master bedroom</button>
+          <button class="btn" onclick="filterSelection('room')">dressing table</button>
+          <button class="btn" onclick="filterSelection('kids')">kids room</button>
+          <button class="btn" onclick="filterSelection('wardrobe')">wardrobe</button>
+          <button class="btn" onclick="filterSelection('shoe-rack')">shoe rack</button>
+          <button class="btn" onclick="filterSelection('book')">book shelf</button>
+          <button class="btn" onclick="filterSelection('other')">others</button>
+        </div>
+        
+        
+        <div class="row">
+          {% for x in pics%}
+          <div class="column {{x.category}}">
+            <div class="content">
+              <a href="{{ x.image.url }}" >
+                <img src="{{ x.image.url }}" oncontextmenu="return false;"  alt="hall" style="width:100%">
+              </a>
+            </div>
+          </div>
+          {% endfor %}
+          
+       </div>
+   
+      {% include "footer-contact.html"%}
+      {% include "side.html"%}
+      {% include "footer.html"%}
+
+      <script src="{% static 'script.js' %}"></script>
+      <script src="{% static 'test/script.js' %}"></script>
+
+</body>
+</html>

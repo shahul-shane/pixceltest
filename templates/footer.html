@@ -1,0 +1,42 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{ % static 'footer.css'% }">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+}
+p,a{
+    font-family: 'Audiowide', cursive;
+}
+footer{
+    text-align: center;
+    display: flex;
+    
+}
+
+@media (max-width:600px) {
+    footer{
+        font-size: 10px;
+    }
+    
+}
+    </style>
+</head>
+<body>
+    <footer style="text-align: center; display: flex; justify-content: center;">
+        <p style="margin-right: 5%; text-transform: capitalize;">Copyright &copy; 2023 Pixcel Interiors</p>
+        <a href="{% url 'privacy'%}">Privacy & Policy</a>
+    </footer>
+    
+</body>
+</html>

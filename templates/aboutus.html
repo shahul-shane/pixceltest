@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="{% static 'about.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  {% include "menu.html"%}
+    </div>
+
+    {% if name %}
+    <center><h2 style="text-align: center; text-transform: lowercase;   font-family: 'Major Mono Display', monospace;">Thanks {{ name }}</h2></center>
+    <center><h2 style="text-align: center; text-transform: lowercase;   font-family: 'Major Mono Display', monospace;">We received your message</h2></center>
+
+    {% endif %}
+    <h1>about us</h1>
+    <div class="about">
+        <div class="container1">
+            <h2>why choose us ?</h2>
+            <p>At <b>PIXCEL INTERIORS, </b> we understand that your space is a reflection of your unique style and personality. That's why we offer a range of interior design services to transform any space into a beautiful and functional environment that suits your individual needs. Our team of experienced designers work closely with you to develop a customized plan that meets your goals and budget, while also maximizing the potential of your space. We take care of everything from selecting the right color palette and materials to designing the layout and selecting furniture and decor. Whether you're looking to update a single room or renovate your entire property, we have the expertise to make your vision a reality. With a focus on exceptional quality, innovative solutions, and outstanding customer service, we strive to exceed your expectations and create a space that you'll love for years to come. Contact us today to schedule a consultation and discover how we can help you transform your space.</p>
+        </div>
+        {% for x in AboutFirstImage%}
+        <div class="about-img">
+            <img src="{{x.image.url}}" alt="">
+        </div>
+        {% endfor %}  
+
+    </div>
+    <div class="keypoints">
+        <div class="container2">
+            <h3>what we do ?</h3>
+            <p><i class="fa-solid fa-building"></i>Transform your living space into a dream home with our expert interior design services.
+            Experience the perfect blend of style and functionality with our bespoke interior designs.
+            Discover your unique style and let us create a personalized interior design that reflects your personality. 
+            From classic to contemporary, we have the expertise to create the perfect interior design for any space. </p>
+            <p><i class="fa-solid fa-building"></i>We use only the finest materials and work with the best craftsmen to create interiors that stand the test of time.
+            Let our team of talented designers take the stress out of creating a beautiful, functional, and comfortable living space.
+            Our interior designs are not just beautiful, they are also practical and designed to suit your lifestyle. </p>
+            <p><i class="fa-solid fa-building"></i>We take pride in providing exceptional customer service and delivering interior designs that exceed expectations.
+            We offer a range of affordable interior design services that cater to all budgets and preferences.
+            Experience the power of a well-designed interior with our expertly crafted and personalized interior design solutions. </p>
+                  
+        </div>
+        <div class="about-img2">
+          {% for x in AboutSecondImage%}
+            <img src="{{ x.image.url}}" alt="">
+          {% endfor %}
+          </div>
+    </div>
+    <div class="look">
+      <h1>take a look at this</h1>
+      <p>(click on any image)</p>
+    </div>
+    <!-- The grid: four columns -->
+<div class="row">
+  {% for x in gallery%}
+    <div class="column">
+      <img src="{{x.image.url}}" alt="" onclick="myFunction(this);">
+    </div>
+  {% endfor %}  
+
+  </div>
+
+  <!-- The expanding image container -->
+  <div class="container3">
+    <!-- Close the image -->
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  
+    <!-- Expanded image -->
+    <img id="expandedImg" style="width:60%" >
+  
+    <!-- Image text -->
+    <div id="imgtext"></div>
+  </div>
+
+
+  {% include "about-touch.html"%}
+
+  {% include "side.html"%}
+  {% include "footer.html"%}
+
+  
+    <script>
+        function myFunction(imgs) {
+  // Get the expanded image
+  var expandImg = document.getElementById("expandedImg");
+  // Get the image text
+  var imgText = document.getElementById("imgtext");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  expandImg.src = imgs.src;
+  // Use the value of the alt attribute of the clickable image as text inside the expanded image
+  imgText.innerHTML = imgs.alt;
+  // Show the container element (hidden with CSS)
+  expandImg.parentElement.style.display = "block";
+}
+    </script>
+       <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

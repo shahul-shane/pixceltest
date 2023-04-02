@@ -1,0 +1,41 @@
+{% load static%}
+<link rel="stylesheet" href="{% static 'footer-touch.css'%}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+
+<div class="contact">
+    <div class="content">
+        <p>we would love to response to your queries</p>
+    </div>
+    <div class="container">
+        <div class="contactForm">
+            <form action="{% url 'contacts' %}" method="post">
+                <h2>send message</h2>
+                {% csrf_token %}
+                <div class="inputBox">
+                  <input type="text" name="message-name" required="required">
+                  <span>full name*</span>
+                </div>
+                <div class="inputBox">
+                  <input type="text" name="message-email" required="required">
+                  <span>e-mail*</span>
+                </div>
+                <div class="inputBox">
+                  <textarea required="required" name="message"></textarea>
+                  <span>type your message........</span>
+                </div>
+                
+                    <input type="submit" class="submit" value="reach us">
+        
+            </form>
+        </div>
+        <div class="social">
+            <h2>you can also be in touch us in</h2>
+            <div class="social-icon">
+                <a href="https://www.instagram.com/pixcelinteriors/"><i id="insta" class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/pixcelinteriors"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.youtube.com/channel/UCwdV2h-R5ZN6kyz6gUNdtMg"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://twitter.com/Pixcelinteriors"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+  </div>

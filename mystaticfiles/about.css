@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Orbitron:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+h1{
+    text-align:center;
+    font-size: 48px;
+    font-weight: 500;
+    margin-top: 3%;
+    font-family: 'Major Mono Display', monospace;
+}
+.about{                                 
+  margin-top: 45px;
+ display: flex;
+ justify-content: space-evenly;
+}
+
+.container1{
+    width: 100%;
+}
+.container1 h2{
+    margin-top: 5%;
+    font-size: 27px;
+    text-align: center;
+    padding: 0px;
+    line-height: 30px;
+    font-family: 'Major Mono Display', monospace;
+}
+.container1 p{
+    margin-top: 5%;
+    font-size: 14px;
+    text-align: left;
+    padding: 0px;
+    line-height: 25px;
+    font-weight: lighter;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.about-img img{
+    margin-top: 20%;
+    width: 550px;
+    height: 300px;
+    border-radius: 15px;  
+    transition: transform .2s;  
+}
+.about-img img:hover{
+  transform: scale(1.2);
+}
+
+.container2 p{
+    text-align: left;
+    font-size: 14px;
+    padding: 0px;
+    line-height: 25px;
+    margin-left: 600px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+h3{
+    text-align: center;
+    font-size: 25px;
+    margin-left: 750px;
+    margin-top: 100px;
+    margin-bottom: 3%;
+    font-family: 'Major Mono Display', monospace;
+}
+.about-img2{
+    margin-top: -900px;
+}
+
+.about-img2 img{
+    width: 500px; 
+    height: 300px;
+    margin-top: 45%;
+    margin-left: 3%;
+    border-radius: 15px;  
+    transition: transform .2s;  
+ 
+   }
+
+.about-img2 img:hover{
+ transform: scale(1.2);
+}
+.fa-building{
+    color: rgb(241, 69, 7);
+    padding-right: 15px;
+   }
+
+
+
+
+:root {
+    --orange: #EDCFA9;
+    --white: #ffffff;
+    --black: #000
+}
+a{
+  color: #000;
+}
+body { background-color: var(--white); 
+overflow-x: hidden;
+}
+.logo{
+display: flex;
+}
+a{
+  text-decoration: none;
+}
+.logo p{
+font-family: 'Audiowide', cursive;
+font-weight: bolder;
+font-size: 20px;
+
+padding-left: 2%;
+}
+.logo span{
+  width: 2px;
+  height: 45px;
+  background-color: #c56900;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.ddiq p{
+  background-color: #ffffff;
+  font-family: sans-serif;
+  line-height: 12px;
+  font-size: 10px;
+}
+.nav {
+  height: 50px;
+  width: 100%;
+  position: relative;
+}
+
+.active{
+position: relative;
+display: inline-block;
+text-decoration: none;
+color: #000000;
+}
+.active::before,
+.active::after{
+content: '';
+position: absolute;
+left: 0%;
+width: 100%;
+height: 2px;
+background-color: rgb(0, 0, 0);
+transform: scaleX(0);
+transition: transform .25s;
+}
+
+.active::before{
+top: -1px;
+transform-origin: left;
+}
+
+.active::after{
+bottom: 10px;
+transform-origin: right;
+}
+
+.active:hover::before,
+.active:hover::after{
+transform: scaleX(1);
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: flex;
+  font-size: 18px;
+  justify-content: right;
+
+}
+
+.nav > .nav-links > a {  
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-family: 'Audiowide', cursive;
+  text-transform: capitalize;
+  text-align: center;
+  margin-right: 5%;
+  margin-top: -2.5%;
+  font-weight: bold;
+}
+
+
+.nav > #nav-check {
+  display: none;
+}
+ 
+
+  /* The grid: Four equal columns that floats next to each other */
+.column {
+  display: block;
+  width: 35%;
+  
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+  width: 50%;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+.row{
+  margin-top: 2%;
+  margin-left: 3%;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table-column;
+  clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container3 {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+#expandedImg{
+  align-items: center;
+  margin-top: -155%;
+  margin-bottom: 5%;
+  margin-left: 30%;
+}
+/* Closable button inside the image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.look{
+  margin-top: 4%;
+}
+.look p{
+  font-family: 'Major Mono Display', monospace;
+  text-align: center;
+  font-weight: bolder;
+  margin-bottom: 3%;
+}
+
+
+
+/*          @media 600px                       */
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+ a{
+  text-decoration: none;
+ }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 6px;
+    margin-left: 55%;
+    margin-right: 5%;
+    border-top: 2px solid #000000;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #000000;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 40px;
+    left: 0px;
+    text-align: center;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+    color: #fff7f7;
+    margin-top: 10%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+  .active{
+      position: relative;
+      display: inline-block;
+      text-decoration: none;
+      color: #000000;
+  }
+  .active::before,
+  .active::after{
+      content: '';
+      position: absolute;
+      top: 15%;
+      width: 2px;
+      height: 80%;
+      background-color: rgb(255, 255, 255);
+      transform: scaleY(0);
+      transition: transform .50s;
+      margin-left: 25%;
+  }
+  
+  .active::before{
+      left: 49%;
+      transform-origin: bottom;
+  }
+  
+  .active::after{
+      right: 10%;
+      transform-origin: top;
+  }
+  
+  .active:hover::before,
+  .active:hover::after{
+      transform: scaleY(1);
+  }
+  
+ 
+  .logo{
+    display: flex;
+  }
+  .logo p{
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bolder;
+    font-size: 17px;
+  }
+    .logo span{
+      width: 2px;
+      height: 40px;
+      background-color: #c56900;
+    }
+  
+    .ddiq p{
+      background-color: #ffffff;
+      font-family: sans-serif;
+      line-height: 10px;
+      font-size: 10px;
+    }
+
+h1{
+  text-align:center;
+  font-size: 28px;
+  font-weight: 500;
+  margin-top: 3%;
+  font-family: 'Major Mono Display', monospace;
+}
+.about{
+  flex-direction: column;
+}
+    .container1{
+      width: 100%;
+      text-align: center;
+  }
+  .container1 h2{
+      margin-top: 2%;
+      font-size: 27px;
+      width: auto;
+      text-align: center;
+      padding: 0px;
+      line-height: 30px;
+      font-family: 'Major Mono Display', monospace;
+  }
+  .container1 p{
+      margin-top: 5%;
+      font-size: 12px;
+      text-align: left;
+      padding: 0px;
+      line-height: 18px;
+      font-weight: lighter;
+      font-family: 'Roboto Mono', monospace;
+  }
+  
+  .about-img img{
+      width: 300px;
+      height: 200px;
+      border-radius: 15px;  
+  }
+  .keypoint{
+    flex-direction: column;
+  }
+  .container2 p{
+    text-align: left;
+    font-size: 12px;
+    padding: 0px;
+    line-height: 18px;
+    margin-left: 3px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+h3{
+  margin-top: 10%;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 0;
+    margin-bottom: 3%;
+    font-family: 'Major Mono Display', monospace;
+}
+.about-img2{
+    margin-top: -900px;
+}
+
+.about-img2 img{
+  margin-top: 300%;
+  width: 300px;
+  height: 200px;
+    margin-left: 3%;
+    border-radius: 15px;  
+   }
+
+.fa-building{
+    color: rgb(241, 69, 7);
+    padding-right: 15px;
+   }
+
+   .look{
+    margin-top: 15%;
+  }
+  .look p{
+    font-family: 'Major Mono Display', monospace;
+    text-align: center;
+    font-weight: bolder;
+    margin-bottom: 3%;
+    font-size: 12px;
+  }
+.look h1{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+center h2{
+  font-size: 12px;
+  margin-top: 3%;
+}
+}
